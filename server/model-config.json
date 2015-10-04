@@ -39,5 +39,9 @@
   "Reservation": {
     "dataSource": "mongodb_dev",
     "public": true
+  },
+  "Token": {
+    "dataSource": "mongodb_dev",
+    "public": false
   }
 }

@@ -9,15 +9,13 @@ module.exports = function(Room) {
 	      			Room.create(room);
 	      		});
 	      	cb(rooms);
-      	})
+      	});
       
-    }
+    };
      
-    Room.remoteMethod(
-        'getremote', 
-        {
-          returns: { arg: 'data', type: 'object', http: { source: 'body' } }
-        }
-    );
+    Room.remoteMethod('getremote', {
+      returns: {arg: 'success', type: 'boolean'},
+      http: {path:'/getremote', verb: 'get'}
+    });
 
 };

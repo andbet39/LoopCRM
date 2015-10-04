@@ -1,7 +1,7 @@
 var xmlrpc = require('xmlrpc');
 
 var client;
-var token;
+var token='1983945456.8066';
 
  exports.startClient = function(){
  		   console.log ("Starting RPC client Wubook");
@@ -19,8 +19,6 @@ var token;
                 console.log('res body:', error.body);
 
               }else{
-
-                console.log(value);
                 token=value[1];
                 console.log(token);
               }
@@ -29,7 +27,7 @@ var token;
 
   exports.getRooms =  function(lcode,cb,ecb){
 
-      var rooms = client.methodCall('fetch_rooms', [token,lcode], 
+      client.methodCall('fetch_rooms', [token,lcode], 
           function (error, value) {
               if(error) {
                 console.log(error);
@@ -45,12 +43,11 @@ var token;
 
       });
 
-      return rooms;
   }
 
-    exports.fetchReservation =  function(lcode,cb,ecb){
+    exports.fetchNewReservation =  function(lcode,cb,ecb){
 
-      var reservation = client.methodCall('fetch_new_bookings', [token,lcode,0], 
+       client.methodCall('fetch_new_bookings', [token,lcode,1,1], 
           function (error, value) {
               if(error) {
                 console.log(error);
@@ -65,6 +62,23 @@ var token;
           }
 
       });
+  }
 
-      return reservation;
+    exports.fetchReservation =  function(lcode,dfrom,dto,cb,ecb){
+
+       client.methodCall('fetch_bookings', [token,lcode,dfrom,dto,0,1], 
+          function (error, value) {
+              if(error) {
+                console.log(error);
+                console.log('Error received');
+                console.log('error:', error);
+                console.log('req headers:', error.req && error.req._header);
+                console.log('res code:', error.res && error.res.statusCode);
+                console.log('res body:', error.body);
+                ecb(error);
+              }else{
+                cb(value);
+          }
+
+      });
   }

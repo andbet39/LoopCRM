@@ -39,7 +39,7 @@
       "type": "number"
     },
     "board": {
-      "type": "string"
+      "type": "object"
     },
     "woodoo": {
       "type": "boolean"

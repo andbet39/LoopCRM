@@ -2,13 +2,14 @@
   "name": "Reservation",
   "plural": "reservations",
   "base": "PersistedModel",
-  "idInjection": true,
+  "idInjection": false,
   "options": {
     "validateUpsert": true
   },
   "properties": {
     "reservation_code": {
-      "type": "string"
+      "type": "string",
+      "id": true
     },
     "status": {
       "type": "string"
@@ -38,13 +39,13 @@
       "type": "string"
     },
     "date_received": {
-      "type": "string"
+      "type": "date"
     },
     "date_arrival": {
-      "type": "string"
+      "type": "date"
     },
     "date_departure": {
-      "type": "string"
+      "type": "date"
     },
     "boards": {
       "type": "string"
@@ -130,7 +131,6 @@
     "ancillary": {
       "type": "string"
     }
-
   },
   "validations": [],
   "relations": {},
