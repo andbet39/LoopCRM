@@ -1,0 +1,52 @@
+{
+  "name": "Room",
+  "plural": "rooms",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "number",
+      "required": true
+    },
+    "name": {
+      "type": "string"
+    },
+    "shortname": {
+      "type": "string"
+    },
+    "occupancy": {
+      "type": "number"
+    },
+    "men": {
+      "type": "number"
+    },
+    "children": {
+      "type": "number"
+    },
+    "subroom": {
+      "type": "string"
+    },
+    "anchorate": {
+      "type": "string"
+    },
+    "price": {
+      "type": "number"
+    },
+    "availability": {
+      "type": "number"
+    },
+    "board": {
+      "type": "string"
+    },
+    "woodoo": {
+      "type": "boolean"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

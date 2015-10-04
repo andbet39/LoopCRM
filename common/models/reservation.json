@@ -1,0 +1,139 @@
+{
+  "name": "Reservation",
+  "plural": "reservations",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "reservation_code": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "channel_reservation_code": {
+      "type": "string"
+    },
+    "id_channel": {
+      "type": "string"
+    },
+    "fount": {
+      "type": "string"
+    },
+    "modified_reservation": {
+      "type": "string"
+    },
+    "was_modified": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "string"
+    },
+    "orig_amout": {
+      "type": "string"
+    },
+    "amount_reason": {
+      "type": "string"
+    },
+    "date_received": {
+      "type": "string"
+    },
+    "date_arrival": {
+      "type": "string"
+    },
+    "date_departure": {
+      "type": "string"
+    },
+    "boards": {
+      "type": "string"
+    },
+    "status_reason": {
+      "type": "string"
+    },
+    "men": {
+      "type": "string"
+    },
+    "children": {
+      "type": "string"
+    },
+    "sessionSeed": {
+      "type": "string"
+    },
+    "customer_city": {
+      "type": "string"
+    },
+    "customer_country": {
+      "type": "string"
+    },
+    "customer_mail": {
+      "type": "string"
+    },
+    "customer_name": {
+      "type": "string"
+    },
+    "customer_surname": {
+      "type": "string"
+    },
+    "customer_notes": {
+      "type": "string"
+    },
+    "customer_phone": {
+      "type": "string"
+    },
+    "customer_address": {
+      "type": "string"
+    },
+    "customer_language": {
+      "type": "string"
+    },
+    "customer_zip": {
+      "type": "string"
+    },
+    "rooms": {
+      "type": "string"
+    },
+    "roomnight": {
+      "type": "string"
+    },
+    "room_opportunities": {
+      "type": "string"
+    },
+    "opportunities": {
+      "type": "string"
+    },
+    "special_offer": {
+      "type": "string"
+    },
+    "addons_list": {
+      "type": "string"
+    },
+    "rooms_occupancies": {
+      "type": "string"
+    },
+    "discount": {
+      "type": "string"
+    },
+    "mandatory_costs": {
+      "type": "string"
+    },
+    "payment_gateway_fee": {
+      "type": "string"
+    },
+    "forced_price": {
+      "type": "string"
+    },
+    "booked_rooms": {
+      "type": "string"
+    },
+    "ancillary": {
+      "type": "string"
+    }
+
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
