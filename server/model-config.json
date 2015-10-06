@@ -14,22 +14,22 @@
     ]
   },
   "User": {
-    "dataSource": "db"
+    "dataSource": "mongodb_dev"
   },
   "AccessToken": {
-    "dataSource": "db",
+    "dataSource": "mongodb_dev",
     "public": false
   },
   "ACL": {
-    "dataSource": "db",
+    "dataSource": "mongodb_dev",
     "public": false
   },
   "RoleMapping": {
-    "dataSource": "db",
+    "dataSource": "mongodb_dev",
     "public": false
   },
   "Role": {
-    "dataSource": "db",
+    "dataSource": "mongodb_dev",
     "public": false
   },
   "Room": {

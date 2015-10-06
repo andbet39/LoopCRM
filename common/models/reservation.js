@@ -7,8 +7,7 @@ module.exports = function(Reservation) {
  Reservation.getremote = function(cb) {
 
   //function(lcode,dfrom,dto,cb,ecb){
-      	Reservation.app.wubook.fetchReservation('1377875938','01/10/2015','01/09/2016',function(data){
-	      	console.log(data);
+      	Reservation.app.wubook.fetchReservation('1377875938','20/09/2015','01/11/2015',function(data){
 	      	var reservation = data[1];
 	      		reservation.forEach(function(reservation) {
 
@@ -23,7 +22,7 @@ module.exports = function(Reservation) {
 
 	      			Reservation.create(reservation);
 	      		});
-	      	cb(reservation);
+	      	cb(data);
       	})
       
     }
@@ -59,10 +58,6 @@ module.exports = function(Reservation) {
 
         cb();
       });
-
-
-        
-      
     }
      
     Reservation.remoteMethod(
