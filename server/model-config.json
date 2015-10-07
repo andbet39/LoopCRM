@@ -42,6 +42,6 @@
   },
   "Token": {
     "dataSource": "mongodb_dev",
-    "public": false
+    "public": true
   }
 }
