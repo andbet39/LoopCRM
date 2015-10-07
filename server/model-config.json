@@ -43,5 +43,13 @@
   "Token": {
     "dataSource": "mongodb_dev",
     "public": true
+  },
+  "movement": {
+    "dataSource": "mongodb_dev",
+    "public": true
+  },
+  "account": {
+    "dataSource": "mongodb_dev",
+    "public": true
   }
 }

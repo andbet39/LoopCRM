@@ -1,0 +1,42 @@
+{
+  "name": "movement",
+  "plural": "movements",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "amount": {
+      "type": "number",
+      "required": true
+    },
+    "reason": {
+      "type": "string"
+    },
+    "paid": {
+      "type": "boolean"
+    },
+    "created": {
+      "type": "date"
+    },
+    "payment_date": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "account": {
+      "type": "hasOne",
+      "model": "account",
+      "foreignKey": ""
+    },
+    "user": {
+      "type": "hasOne",
+      "model": "User",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
